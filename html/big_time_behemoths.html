@@ -1,29 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Time Behemoths - Withers Art Collection</title>
+    <link href="../WAM.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html" style="text-decoration: none; color: inherit;">The George Withers Collection</a></h1>
+    </header>
+    <main>
+        <section id="art-details">
+            <div class="art-image">
+                <img src="../images/BigTimeBehemoth.png" alt="Big Time Behemoths">
+            </div>
+            <div class="art-info">
+                <h2>Big Time Behemoths</h2>
+                <p class="artist-name">George Withers</p>
+                <p></p>
+                <p class="art-description">Behemoths are always big, but only some are big time!</p>
+                
+                <!-- Add the "Email This Page" button -->
+                <button id="emailButton">Email This Page</button>
+            </div>
+        </section>            
+    </main>
 
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Big Time Behemoths - Withers Art Collection</title>
-                <link href="../WAM.css" rel="stylesheet">
-            </head>
-            <body>
-                <header>
-                    <h1><a href="../index.html" style="text-decoration: none; color: inherit;">The George Withers Collection</a></h1>
-                </header>
-                <main>
-                    <section id="art-details">
-                        <div class="art-image">
-                            <img src="../images/BigTimeBehemoth.png" alt="Big Time Behemoths">
-                        </div>
-                        <div class="art-info">
-                            <h2>Big Time Behemoths</h2>
-                            <p class="artist-name">George Withers</p>
-                            <p></p>
-                            <p class="art-description">Behemoths are always big, but only some are big time!</p>
-                        </div>
-                    </section>
-                </main>
-            </body>
-            </html>
+    <script>
+        // Function to create and open the "mailto" link
+        function sendEmail() {
+            // Get the current page's URL
+            var currentPageURL = window.location.href;
+            
+            // Create the email subject and body
+            var subject = "Check out this webpage!";
+            var body = "I thought you might find this webpage interesting:\n\n" + currentPageURL;
+            
+            // Encode special characters in the subject and body
+            subject = encodeURIComponent(subject);
+            body = encodeURIComponent(body);
+            
+            // Create the "mailto" link
+            var mailtoLink = "mailto:?subject=" + subject + "&body=" + body;
+            
+            // Open the default email client
+            window.location.href = mailtoLink;
+        }
+
+        // Attach the sendEmail function to the button click event
+        document.getElementById("emailButton").addEventListener("click", sendEmail);
+    </script>
+</body>
+</html>
+
         
