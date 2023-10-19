@@ -30,8 +30,11 @@
     <script>
         // Function to create and open the "mailto" link
         function sendEmail() {
+            console.log("sendEmail function is executing.");
+
             // Get the current page's URL
             var currentPageURL = window.location.href;
+            console.log("Current page URL: " + currentPageURL);
             
             // Create the email subject and body
             var subject = "Check out this webpage!";
@@ -43,8 +46,10 @@
             
             // Create the "mailto" link
             var mailtoLink = "mailto:?subject=" + subject + "&body=" + body;
+            console.log("Mailto link: " + mailtoLink);
             
             // Open the default email client
+            console.log("Opening default email client.");
             window.location.href = mailtoLink;
         }
 
@@ -53,5 +58,3 @@
     </script>
 </body>
 </html>
-
-        
