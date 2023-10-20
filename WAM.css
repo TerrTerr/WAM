@@ -85,3 +85,10 @@ header h1 {
     font-size: 4em; /* Adjust to the desired size */
     margin: 0; /* Removes default margin from h1 */
 }
+
+#emailButton {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
