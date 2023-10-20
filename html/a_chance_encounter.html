@@ -22,6 +22,21 @@
                             <p></p>
                             <p class="art-description"></p>
                         </div>
+                                    <button id="emailButton">Email This Page</button>
+                                    <script>
+                                                document.getElementById("emailButton").addEventListener("click", function() {
+                                                            var currentPageURL = window.location.href;
+                                                            var subject = "Check out this webpage!";
+                                                            var body = "I thought you might find this webpage interesting: " + '<a href="' + currentPageURL + '">' + currentPageURL + '</a>';
+                                                            var mailtoLink = "mailto:?subject=" + subject + "&body=" + encodeURIComponent(body);
+                                                            window.location.href = mailtoLink;
+                                                });
+                                    </script>
+                        </div>
+                    </section>
+                </main>
+            </body>
+            </html>                                
                     </section>
                 </main>
             </body>
