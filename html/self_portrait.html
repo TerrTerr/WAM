@@ -26,8 +26,8 @@
                                                 document.getElementById("emailButton").addEventListener("click", function() {
                                                             var currentPageURL = window.location.href;
                                                             var subject = "Check out this webpage!";
-                                                            var body = "I thought you might find this webpage interesting:\n\n" + currentPageURL;
-                                                            var mailtoLink = "mailto:?subject=" + subject + "&body=" + body;
+                                                            var body = "I thought you might find this webpage interesting: " + '<a href="' + currentPageURL + '">' + currentPageURL + '</a>';
+                                                            var mailtoLink = "mailto:?subject=" + subject + "&body=" + encodeURIComponent(body);
                                                             window.location.href = mailtoLink;
                                                 });
                                     </script>
